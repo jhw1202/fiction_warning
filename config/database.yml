@@ -17,7 +17,7 @@ development:
   encoding: unicode
   database: fiction_warning_development
   pool: 5
-  username: fiction_warning
+  username: 
   password:
 
   # Connect on a TCP socket. Omitted by default since the client uses a
@@ -43,7 +43,7 @@ test:
   encoding: unicode
   database: fiction_warning_test
   pool: 5
-  username: fiction_warning
+  username: 
   password:
 
 production:
@@ -51,5 +51,5 @@ production:
   encoding: unicode
   database: fiction_warning_production
   pool: 5
-  username: fiction_warning
+  username: 
   password:
