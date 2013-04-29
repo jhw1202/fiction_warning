@@ -2,14 +2,20 @@
   <h1><%= @title %></h1>
 </div>
 
-  <div class="content">
-    <%= @page.content %>
+<% if @page.content.blank? %>
+  Render content creation forms.
+<% else %>
+
+    <div class="content">
+      <%= @page.content %>
+    </div>
+
+  <div class="choice-list">
+    <% @choices.each do |choice| %>
+      <div class="choice">
+        <%= link_to Page.find_by_id(choice.child_id).title, "#{choice.child_id}" %>
+      </div>
+    <% end %>
   </div>
 
-<div class="choice-list">
-  <% @choices.each do |choice| %>
-    <div class="choice">
-      <%= link_to choice.title, "#{choice.child_id}" %>
-    </div>
-  <% end %>
-</div>
+<% end %>
