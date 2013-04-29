@@ -14,7 +14,6 @@
 ActiveRecord::Schema.define(:version => 20130429162856) do
 
   create_table "choices", :force => true do |t|
-    t.string   "title"
     t.integer  "child_id"
     t.integer  "page_id"
     t.datetime "created_at", :null => false
@@ -22,8 +21,10 @@ ActiveRecord::Schema.define(:version => 20130429162856) do
   end
 
   create_table "pages", :force => true do |t|
+    t.string   "title"
     t.text     "content"
     t.integer  "parent_id"
+    t.integer  "story_id"
     t.datetime "created_at", :null => false
     t.datetime "updated_at", :null => false
   end

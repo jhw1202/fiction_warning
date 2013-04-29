@@ -1,5 +1,6 @@
 FictionWarning::Application.routes.draw do
   resources :pages
+  resources :stories
   root :to => 'stories#index'
 
   # The priority is based upon order of creation:

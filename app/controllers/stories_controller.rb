@@ -1,1 +1,5 @@
-stories_controller.rb
+class StoriesController < ApplicationController
+  def index
+    @stories = Story.all
+  end
+end

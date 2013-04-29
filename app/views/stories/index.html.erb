@@ -1,0 +1,11 @@
+<h2>Stories</h2>
+<div class="story_list">
+  <% @stories.each do |story| %>
+    <div class="story_title">
+      <h3><%= link_to story.title, "pages/#{story.pages.first.id}" %></h3>
+    </div>
+    <div class="page_count">
+      <%= story.page_count %> pages long.
+    </div>
+  <% end %>
+</div>

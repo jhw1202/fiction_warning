@@ -7,13 +7,9 @@
   </div>
 
 <div class="choice-list">
-  <div class="choice">
-    This is the first choice.
-  </div>
-  <div class="choice">
-    This is the second choice.
-  </div>
-  <div class="choice">
-    This is the third choice.
-  </div>
+  <% @choices.each do |choice| %>
+    <div class="choice">
+      <%= link_to choice.title, "#{choice.child_id}" %>
+    </div>
+  <% end %>
 </div>
