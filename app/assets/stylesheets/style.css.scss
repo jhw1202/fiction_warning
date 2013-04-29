@@ -1,4 +1,4 @@
-body {
+body, textarea {
   font-family: 'BitterRegular', Helvetica, sans-serif;
   line-height: 1.62em;
   background-image: url('creampaper.png');
@@ -58,3 +58,16 @@ em, i {
 .choice {
   padding: 8px 0;
 }
+
+textarea {
+  width: 100%;
+  height: 250px;
+  resize: none;
+  border-radius: 8px;
+  border: 1px dashed rgba(0,0,0,0.5);
+  background: none;
+  padding: 16px;
+  font-size: 16px;
+  outline: none;
+}
+

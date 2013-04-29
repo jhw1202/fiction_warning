@@ -3,7 +3,7 @@
 </div>
 
 <% if @page.content.blank? %>
-  Render content creation forms.
+  <%= render 'write_page' %>
 <% else %>
-  <%= render 'written_page' %>
+  <%= render 'read_page' %>
 <% end %>
