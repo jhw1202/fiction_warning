@@ -7,7 +7,7 @@ class PagesController < ApplicationController
 
   def update
     @page  = current_page
-    puts "***** #{@page.title}"
+    @page.choices.build
     redirect_to "pages/#{@page.id}"
   end
 end
