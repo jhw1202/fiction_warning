@@ -1,7 +1,0 @@
-<%= form_for @page do |f| %>
-  <%= f.text_area :content, :autofocus => true, :placeholder => "Continue the story..." %>
-  <%= f.fields_for :choice do |choice| %>
-    <%= choice.text_field :name %>
-  <% end %>
-  <%= f.submit "Go!", :class => 'button' %>
-<% end %>
