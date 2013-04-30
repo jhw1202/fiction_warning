@@ -13,10 +13,6 @@ em, i {
   font-family: 'BitterItalic', Helvetica, sans-serif;
 }
 
-::selection {
-  background-color: #aaa;
-}
-
 .header {
   width: 100%;
   margin-bottom: 24px;
@@ -34,6 +30,10 @@ em, i {
   margin: 0 auto;
   text-align: center;
   text-shadow: 0px 1px 0px #fff;
+  a {
+    text-decoration: none;
+    color: #000;
+  }
 }
 
 .container {

@@ -16,6 +16,7 @@ Page.create({
   :content => Faker::Lorem.paragraph(sentence_count = 10),
   :parent_id => 0,
   :story_id => @story.id })
+@story.page_count += 1
 
 # Create three choices and corresponding child pages
 i = 1
@@ -27,7 +28,6 @@ i = 1
     :title => Faker::Lorem.sentence,
     :parent_id => i,
     :story_id => @story.id })
-  @story.page_count += 1
   @story.save
   i += 1
 end
