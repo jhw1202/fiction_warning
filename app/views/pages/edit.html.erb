@@ -1,0 +1,9 @@
+<%= render 'title' %>
+
+<%= form_tag url_for(:controller => 'pages', :action => 'update'), :method => 'put' do %>
+  <%= text_area_tag :content, nil, :autofocus => true, :placeholder => "Continue the story..." %>
+  <%= label_tag :choice1, "Choice 1" %><%= text_field_tag :choice1 %>
+  <%= label_tag :choice2, "Choice 2" %><%= text_field_tag :choice2 %>
+  <%= label_tag :choice3, "Choice 3" %><%= text_field_tag :choice3 %>
+  <%= submit_tag "Go!", :class => 'button' %>
+<% end %>

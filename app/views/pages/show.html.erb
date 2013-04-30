@@ -1,9 +1,13 @@
-<div class="title">
-  <h1><%= @title %></h1>
+<%= render 'title' %>
+
+<div class="content">
+  <%= @page.content %>
 </div>
 
-<% if @page.content.blank? %>
-  <%= render 'write_page' %>
-<% else %>
-  <%= render 'read_page' %>
-<% end %>
+<div class="choice-list">
+  <% @choices.each do |choice| %>
+    <div class="choice">
+      <%= link_to Page.find_by_id(choice.child_id).title, "#{choice.child_id}" %>
+    </div>
+  <% end %>
+</div>
