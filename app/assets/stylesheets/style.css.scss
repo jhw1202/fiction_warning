@@ -13,6 +13,10 @@ em, i {
   font-family: 'BitterItalic', Helvetica, sans-serif;
 }
 
+::selection {
+  background-color: #aaa;
+}
+
 .header {
   width: 100%;
   margin-bottom: 24px;
@@ -41,7 +45,7 @@ em, i {
   margin: 0 auto;
   h1 {
     margin: 0;
-    padding: 16px 0;
+    padding: 0;
     text-shadow: 0px 1px 0px #fff;
     line-height: 40px;
   }
@@ -49,6 +53,10 @@ em, i {
 
 .content, .choice-list {
   margin: 0 auto;
+}
+
+.content {
+  margin-top: 16px;
 }
 
 .choice-list {
@@ -69,5 +77,25 @@ textarea {
   padding: 16px;
   font-size: 16px;
   outline: none;
+  box-sizing: border-box;
+  margin: 16px 0;
 }
 
+textarea::selection {
+  background-color: #aaa;
+}
+
+.button {
+  margin: 0;
+  background-color: #aaa;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-family: 'BitterRegular', Helvetica, sans-serif;
+}
+
+.button:hover {
+  cursor: pointer;
+  background-color: #fff;
+}
