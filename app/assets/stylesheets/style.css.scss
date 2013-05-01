@@ -1,4 +1,4 @@
-body, textarea {
+body, textarea, .choice_box {
   font-family: 'BitterRegular', Helvetica, sans-serif;
   line-height: 1.62em;
   background-image: url('creampaper.png');
@@ -71,22 +71,21 @@ textarea {
   width: 100%;
   height: 250px;
   resize: none;
-  border-radius: 8px;
-  border: 1px dashed rgba(0,0,0,0.5);
-  background: none;
-  padding: 16px;
-  font-size: 16px;
-  outline: none;
-  box-sizing: border-box;
   margin: 16px 0;
 }
 
-textarea::selection {
-  background-color: #aaa;
+textarea, .choice_box {
+  font-size: 16px;
+  outline: none;
+  box-sizing: border-box;
+  background: none;
+  border-radius: 8px;
+  border: 1px dashed rgba(0,0,0,0.5);
+  padding: 8px;
 }
 
 .button {
-  margin: 0;
+  margin: 16px 0 0;
   background-color: #aaa;
   padding: 8px 16px;
   border: none;
@@ -98,4 +97,12 @@ textarea::selection {
 .button:hover {
   cursor: pointer;
   background-color: #fff;
+}
+
+.choice_box {
+  width: 60%;
+}
+
+.write label {
+  margin-right: 16px;
 }
